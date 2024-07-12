@@ -42,6 +42,16 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
+require("lspconfig").phpactor.setup {
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+	root_dir = require("lspconfig/util").root_pattern("composer.json", ".git"),
+	    init_options = {
+        ["language_server_phpstan.enabled"] = false,
+        ["language_server_psalm.enabled"] = false,
+    }
+}
+
 require("lspconfig").omnisharp.setup {
 	on_attach = M.on_attach,
 	capabilities = M.capabilities,
