@@ -159,6 +159,7 @@ local default_plugins = {
       {
         -- snippet plugin
         "L3MON4D3/LuaSnip",
+				dependencies = { "ft-labs/snippets" },
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
         config = function(_, opts)
           require("plugins.configs.others").luasnip(opts)

@@ -58,6 +58,10 @@ require("lspconfig").omnisharp.setup {
 }
 
 require("lspconfig").clangd.setup {
+	  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 }
