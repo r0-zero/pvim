@@ -33,7 +33,4 @@ dofile(vim.g.base46_cache .. "statusline")
 require "settings.autocmds"
 require "settings.macros"
 require "settings.options"
-
-vim.schedule(function()
-  require "settings.mappings"
-end)
+require("settings.utils").load_mappings()

@@ -1,5 +1,3 @@
-require "nvchad.options"
-
 local opt = vim.opt
 local g = vim.g
 
