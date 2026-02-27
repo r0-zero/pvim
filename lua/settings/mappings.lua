@@ -25,7 +25,6 @@ M.general = {
 	["<F4>"] = {":! compwrite && clear && g++ -std=c++17 -O3 %<cr> | :vsp |terminal ./a.out<inp.txt <cr>"},
 	["<F5>"] = {":! compwrite && clear && gcc -std=c99 -O3 %<cr> | :vsp |terminal ./a.out<inp.txt <cr>"},
 	-- Toggle tags
-	["<leader>tt"] = {":SymbolsOutline<CR>"}
   },
 
   t = {
