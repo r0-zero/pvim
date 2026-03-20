@@ -188,6 +188,7 @@ local options = {
     }),
   },
   sources = {
+		{ name = "copilot" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
 		{ name = "nvim_lsp" },

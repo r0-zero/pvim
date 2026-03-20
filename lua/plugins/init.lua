@@ -64,8 +64,30 @@ return {
     end,
   },
 
-		{
+	{
+		"zbirenbaum/copilot.lua",
+		lazy = false,
+		config = function()
+			require("copilot").setup({
+				suggestion = { enabled = true },
+				auto_trigger = true,
+				panel = { enabled = true },
+			})
+		end,
+	},
+
+	{
+		"zbirenbaum/copilot-cmp",
+		lazy = false,
+		dependencies = { "zbirenbaum/copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
+
+	{
 		"coder/claudecode.nvim",
+		lazy = false,
 		dependencies = { "folke/snacks.nvim" },
 		config = true,
 		keys = {
